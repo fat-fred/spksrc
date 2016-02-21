@@ -9,7 +9,7 @@ INSTALL_DIR="/usr/local/${PACKAGE}"
 PATH="${INSTALL_DIR}/bin:${PATH}"
 USER="minisatip"
 TRANSMISSION="${INSTALL_DIR}/bin/minisatip"
-PID_FILE="${INSTALL_DIR}/var/minisatip.pid"
+PID_FILE="/var/run/minisatip.pid"
 
 
 start_daemon ()
@@ -22,8 +22,8 @@ start_daemon ()
 
 stop_daemon ()
 {
-    kill ${minisatip}
-    wait_for_status 1 20 || kill -9 ${minisatip}
+    kill `cat ${PID_FILE}`
+    wait_for_status 1 20 || kill -9 `cat ${PID_FILE}`
     rm -f ${PID_FILE}
 }
 
