@@ -1,0 +1,15 @@
+[{
+    "step_title": "Basic configuration",
+    "items": [{
+        "type": "textfield",
+        "desc": "Config string",
+        "subitems": [{
+            "key": "config",
+            "desc": "Configuration of minisatip",
+            "defaultValue": "-n eth0:1",
+            "validator": {
+                "allowBlank": false,
+	                 }
+		   }]
+	    }]
+}]
