@@ -20,7 +20,6 @@ include ../../mk/spksrc.cross-cc.mk
 
 .PHONY: myConfigure
 myConfigure: 
-#	$(RUN) cp -r $(STAGING_INSTALL_PREFIX)/include/libxml2/* $(STAGING_INSTALL_PREFIX)/include/
 
 .PHONY: myCompile
 myCompile:
