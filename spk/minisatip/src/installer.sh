@@ -42,6 +42,11 @@ syno_group_remove ()
     fi
 }
 
+preinst ()
+{
+    exit 0
+}
+
 postinst ()
 {
     # Link
